@@ -38,7 +38,7 @@ public:
             return curr->next;
         }
         prev->next=nxt;
-        curr->next=NULL;
+        //curr->next=NULL;
         return head;
     }
 };
