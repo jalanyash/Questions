@@ -1,6 +1,7 @@
 class Solution {
 public:
-    int getPivot(vector<int>& nums, int n){
+    int getPivot(vector<int>& nums){
+        int n=nums.size();
         int s=0, e=n-1;
         int mid= s+ (e-s)/2;
         
@@ -40,7 +41,7 @@ public:
     }
     int search(vector<int>& nums, int target) {
         int n=nums.size();
-        int pivot= getPivot(nums,n);
+        int pivot= getPivot(nums);
         if(target>=nums[pivot] && target<=nums[n-1]){
             return binarySearch(nums,pivot,n-1,target);
         }
